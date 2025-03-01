@@ -1,4 +1,6 @@
 # Truong Chi Bao-21093561
+# Create database and add data
+![Image](https://github.com/user-attachments/assets/a5df84ea-8314-4477-a98b-ed7639bcce26)
 # Sign-up
 ![Image](https://github.com/user-attachments/assets/4691bf64-f3b7-41c9-b6a7-8ea5057a065d)
 # Sign-in
