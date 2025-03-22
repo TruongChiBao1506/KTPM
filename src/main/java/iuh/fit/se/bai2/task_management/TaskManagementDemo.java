@@ -7,9 +7,9 @@ public class TaskManagementDemo {
         Task bugTask = new Task("Fix Homepage Crash", "Homepage crashes when user is not logged in");
 
         // Tạo các thành viên nhóm
-        TeamMember developer = new TeamMember("Trương Chí Bảo", "Developer");
-        TeamMember tester = new TeamMember("Nguyễn Văn Test", "QA Engineer");
-        TeamMember manager = new TeamMember("Lê Thị Manager", "Project Manager");
+        TeamMember developer = new TeamMember("Trương Chi Bảo", "Developer");
+        TeamMember tester = new TeamMember("Nguyễn Văn A", "QA Engineer");
+        TeamMember manager = new TeamMember("Lê Thị C", "Project Manager");
 
         // Đăng ký theo dõi công việc
         featureTask.attach(developer);
