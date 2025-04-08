@@ -1,0 +1,46 @@
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: wp-mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: wp_pass
+    ports:
+      - "3306:3306"
+    networks:
+      - wp-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wp-app
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - wordpress-data:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_pass
+      WORDPRESS_DB_NAME: wordpress_db
+    ports:
+      - "8088:80"
+    networks:
+      - wp-network
+
+volumes:
+  mysql-data:
+  wordpress-data:
+
+networks:
+  wp-network:
+    driver: bridge

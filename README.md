@@ -77,3 +77,21 @@ docker exec -it bai7_docker_compose-mongo-1 mongosh -u admin -p password
 ![Image](https://github.com/user-attachments/assets/d69a3c4c-0304-4f4e-85db-01691d0faebb)
 
 ![Image](https://github.com/user-attachments/assets/fdfeedf9-3dfa-48e9-b72d-56f955eb24d2)
+#Phần 3
+## Exercise 1
+
+![Image](https://github.com/user-attachments/assets/b9df609b-eb1f-4c0a-971e-ba0f99938212)
+
+![Image](https://github.com/user-attachments/assets/ba6cecae-de77-4ba1-a9d9-aa14506eb781)
+## Exercise 2
+
+![Image](https://github.com/user-attachments/assets/a425b584-7772-42dc-8609-c04d4e20237c)
+
+![Image](https://github.com/user-attachments/assets/0745f577-a210-489b-8781-f47c41aa7a07)
+
+![Image](https://github.com/user-attachments/assets/bff049f3-4f8e-4983-ad2c-7cf407d216b9)
+## Exercise 3
+
+![Image](https://github.com/user-attachments/assets/db49d735-2ea1-4ad0-a622-bfc0c5b8a748)
+
+![Image](https://github.com/user-attachments/assets/2531cd4e-1f9f-4a3d-aff4-44d91bbff380)

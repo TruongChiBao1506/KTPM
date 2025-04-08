@@ -1,0 +1,44 @@
+services:
+  flask1:
+    build:
+      context: ./flask-app
+      dockerfile: Dockerfile
+    container_name: flask1
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  flask2:
+    build:
+      context: ./flask-app
+      dockerfile: Dockerfile
+    container_name: flask2
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      flask1:
+        condition: service_healthy
+      flask2:
+        condition: service_healthy
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
