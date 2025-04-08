@@ -1,0 +1,10 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: limited-redis
+    command: redis-server --requirepass mypassword 
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 256M  
