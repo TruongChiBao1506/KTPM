@@ -95,3 +95,35 @@ docker exec -it bai7_docker_compose-mongo-1 mongosh -u admin -p password
 ![Image](https://github.com/user-attachments/assets/db49d735-2ea1-4ad0-a622-bfc0c5b8a748)
 
 ![Image](https://github.com/user-attachments/assets/2531cd4e-1f9f-4a3d-aff4-44d91bbff380)
+## Exercise 4
+
+![Image](https://github.com/user-attachments/assets/b69e5828-0c43-4c69-b216-ee42e4af4000)
+
+![Image](https://github.com/user-attachments/assets/2c7692d5-5590-42cf-8eb8-10f0b8a659ee)
+
+![Image](https://github.com/user-attachments/assets/97593544-a87c-4221-ab09-027f8c0e4bad)
+## Exercise 5
+
+![Image](https://github.com/user-attachments/assets/b5d95cea-aaa9-467a-b474-b17432bec61a)
+
+![Image](https://github.com/user-attachments/assets/c690325f-1827-4dcf-9816-1548f9e9cf5d)
+
+![Image](https://github.com/user-attachments/assets/e0f225d9-f8e8-4cd0-beee-23d2b81b88fe)
+## Exercise 6
+### Dev
+
+![Image](https://github.com/user-attachments/assets/7e48ed13-b22f-4903-9287-19db5cf619a6)
+
+![Image](https://github.com/user-attachments/assets/e65b164a-61e7-40ea-9dd8-de5a6a8b3d83)
+### Prod
+
+![Image](https://github.com/user-attachments/assets/431e0301-5f35-49be-9ad2-acea07a69988)
+
+![Image](https://github.com/user-attachments/assets/31697239-0205-40d9-b296-92a84d696c9f)
+## Exercise 7
+
+![Image](https://github.com/user-attachments/assets/4a3305cd-5142-461a-ada7-28e0a90d8f32)
+
+![Image](https://github.com/user-attachments/assets/038aa03e-532a-4088-b6ff-67acc26997b6)
+
+![Image](https://github.com/user-attachments/assets/ef79be6d-d72e-48d4-ab2d-9fa568356599)

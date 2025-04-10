@@ -1,0 +1,51 @@
+version: "3"
+services:
+  vote:
+    image: "dockersamples/examplevotingapp_vote:before"  # Frontend từ Docker Hub
+    ports:
+      - "5000:80"  # Map port 5000 trên host tới port 80 trong container
+    networks:
+      - frontend
+    depends_on:
+      - redis
+
+  result:
+    image: "dockersamples/examplevotingapp_result:before"  # Backend từ Docker Hub
+    ports:
+      - "5001:80"  # Map port 5001 trên host tới port 80 trong container
+    networks:
+      - backend
+    depends_on:
+      - db
+
+  redis:
+    image: "redis:alpine"  # Image chính thức từ Docker Hub
+    networks:
+      - frontend
+
+  worker:
+    image: "dockersamples/examplevotingapp_worker:latest"  # Worker từ Docker Hub
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - redis
+      - db
+
+  db:
+    image: "postgres:13"  # Image chính thức từ Docker Hub
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "votes"
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:
+
+volumes:
+  db-data:
